@@ -1,7 +1,8 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/giaodien2.dart';
 
-void main() => runApp(MyApp());
+void main() => runApp(NewScreen());
 
 /// This Widget is the main application widget.
 class MyApp extends StatelessWidget {
