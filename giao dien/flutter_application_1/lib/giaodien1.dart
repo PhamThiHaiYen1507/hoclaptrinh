@@ -14,15 +14,20 @@ class MyApp extends StatelessWidget {
           backgroundColor: Colors.black,
           title: Row(
             children: [
-              Container(
-                child: Row(
-                  children: [
-                    Icon(Icons.search),
-                    Text("Tìm mã chứng khoán"),
-                  ],
+              Expanded(
+                child: Container(
+                  padding: EdgeInsets.all(15),
+                  child: Row(
+                    children: [
+                      Icon(Icons.search),
+                      Text("Tìm mã chứng khoán"),
+                    ],
+                  ),
+                  decoration: BoxDecoration(
+                      border: Border.all(width: 1, color: Colors.white)),
                 ),
-                decoration: BoxDecoration(border: Border.all(width: 100)),
               ),
+              SizedBox(width: 15),
               Text(
                 "Đóng",
                 textAlign: TextAlign.right,
@@ -34,33 +39,16 @@ class MyApp extends StatelessWidget {
           children: [
             Container(
               child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Container(
                       child: Text(
                     "Gần đây",
                     style: TextStyle(color: Colors.yellow),
                   )),
-                  Icon(Icons.delete),
-                ],
-              ),
-            ),
-            Container(
-              child: Row(
-                children: [
-                  Container(
-                    child: Column(
-                      children: [Text("SHS"), Text("Chứng khoán SG HN")],
-                    ),
-                  ),
-                  Container(
-                    child: Column(
-                      children: [Text("VND"), Text("Chứng khoán VNDirect")],
-                    ),
-                  ),
-                  Container(
-                    child: Column(
-                      children: [Text("LPB"), Text("Ngân hàng Liên Việt")],
-                    ),
+                  Icon(
+                    Icons.delete,
+                    color: Colors.red,
                   ),
                 ],
               ),
@@ -68,19 +56,100 @@ class MyApp extends StatelessWidget {
             Container(
               child: Row(
                 children: [
-                  Container(
-                    child: Column(
-                      children: [Text("SHB"), Text("Ngân hàng SG HN")],
+                  Expanded(
+                    child: Container(
+                      padding: EdgeInsets.all(10),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text("SHS", style: TextStyle(color: Colors.white)),
+                          Text("Chứng khoán SG HN",
+                              style: TextStyle(color: Colors.white))
+                        ],
+                      ),
+                      decoration: BoxDecoration(
+                          border: Border.all(width: 1, color: Colors.white)),
                     ),
                   ),
-                  Container(
-                    child: Column(
-                      children: [Text("MBS"), Text("Chứng khoán MB")],
+                  Expanded(
+                    child: Container(
+                      padding: EdgeInsets.all(10),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text("VND", style: TextStyle(color: Colors.white)),
+                          Text("Chứng khoán VNDirect",
+                              style: TextStyle(color: Colors.white))
+                        ],
+                      ),
+                      decoration: BoxDecoration(
+                          border: Border.all(width: 1, color: Colors.white)),
                     ),
                   ),
-                  Container(
-                    child: Column(
-                      children: [Text("MBB"), Text("Ngân hàng Quân Đội")],
+                  Expanded(
+                    child: Container(
+                      padding: EdgeInsets.all(10),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text("LPB", style: TextStyle(color: Colors.white)),
+                          Text("Ngân hàng Liên Việt",
+                              style: TextStyle(color: Colors.white))
+                        ],
+                      ),
+                      decoration: BoxDecoration(
+                          border: Border.all(width: 1, color: Colors.white)),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            Container(
+              child: Row(
+                children: [
+                  Expanded(
+                    child: Container(
+                      padding: EdgeInsets.all(10),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text("SHB", style: TextStyle(color: Colors.white)),
+                          Text("Ngân hàng SG HN",
+                              style: TextStyle(color: Colors.white))
+                        ],
+                      ),
+                      decoration: BoxDecoration(
+                          border: Border.all(width: 1, color: Colors.white)),
+                    ),
+                  ),
+                  Expanded(
+                    child: Container(
+                      padding: EdgeInsets.all(10),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text("MBS", style: TextStyle(color: Colors.white)),
+                          Text("Chứng khoán MB",
+                              style: TextStyle(color: Colors.white))
+                        ],
+                      ),
+                      decoration: BoxDecoration(
+                          border: Border.all(width: 1, color: Colors.white)),
+                    ),
+                  ),
+                  Expanded(
+                    child: Container(
+                      padding: EdgeInsets.all(10),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text("MBB", style: TextStyle(color: Colors.white)),
+                          Text("Ngân hàng Quân Đội",
+                              style: TextStyle(color: Colors.white))
+                        ],
+                      ),
+                      decoration: BoxDecoration(
+                          border: Border.all(width: 1, color: Colors.white)),
                     ),
                   ),
                 ],
