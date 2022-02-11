@@ -1,8 +1,13 @@
 import 'package:flutter/material.dart';
 
-class NewScreen extends StatelessWidget {
+class NewScreen extends StatefulWidget {
   const NewScreen({Key? key}) : super(key: key);
 
+  @override
+  State<NewScreen> createState() => _NewScreenState();
+}
+
+class _NewScreenState extends State<NewScreen> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -92,18 +97,34 @@ class NewScreen extends StatelessWidget {
                         )),
                     SizedBox(width: 8),
                     Container(
-                      padding: EdgeInsets.only(
+                      margin: EdgeInsets.only(
                           left: 16, bottom: 15, top: 15, right: 70),
-                      child: Text(
-                        "Số điện thoại đăng nhập",
-                        style: TextStyle(
-                            color: Color.fromRGBO(101, 91, 81, 1),
-                            fontSize: 12.0),
+                      child: TextField(
+                        decoration: InputDecoration(
+                          border: OutlineInputBorder(
+                              borderRadius: BorderRadius.circular(8),
+                              borderSide: BorderSide.none),
+                          enabledBorder: OutlineInputBorder(
+                              borderRadius: BorderRadius.circular(8),
+                              borderSide: BorderSide.none),
+                          focusedBorder: OutlineInputBorder(
+                              borderRadius: BorderRadius.circular(8),
+                              borderSide:
+                                  BorderSide(width: 2, color: Colors.white)),
+                          errorBorder: OutlineInputBorder(
+                              borderRadius: BorderRadius.circular(8),
+                              borderSide:
+                                  BorderSide(width: 1, color: Colors.white)),
+                          labelText: 'Số điện thoại đăng nhập',
+                        ),
+                        //style: TextStyle(
+                        //color: Color.fromRGBO(101, 91, 81, 1),
+                        //fontSize: 12.0),
                       ),
-                      decoration: BoxDecoration(
+                      /*decoration: BoxDecoration(
                           border: Border.all(
                               width: 1, color: Color.fromRGBO(253, 65, 84, 1)),
-                          borderRadius: BorderRadius.all(Radius.circular(4))),
+                          borderRadius: BorderRadius.all(Radius.circular(4))),*/
                     )
                   ],
                 ),
